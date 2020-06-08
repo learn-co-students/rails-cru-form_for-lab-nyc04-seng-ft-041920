@@ -1,0 +1,21 @@
+<!------
+<%#= form_tag artist_path(@artist), method: "put" do %>
+  <label>Artist name: </label><br>
+  <%#= text_field_tag :name, @artist.name %><br>
+
+  <label>Bio : </label><br>
+  <%#= text_field_tag :bio, @artist.bio%><br>
+
+  <%#= submit_tag "Submit Artist" %>
+<%# end %>
+------>
+<%= form_for @artist do |f|%>
+  <label>Arist name:</label><br>
+  <%= f.text_field :name %><br>
+
+  <label>Bio:</label><br>
+  <%= f.text_field :bio %><br>
+  
+  <%= f.submit %>
+<% end %>
+
